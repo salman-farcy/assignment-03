@@ -5,7 +5,9 @@
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>assignment-03</title>
      <!-- googel font -->
-
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,700&display=swap" rel="stylesheet">
      <!-- font-awesome cdn -->
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
      <!-- tailwind and daisyui cdn-->
@@ -17,9 +19,15 @@
      <script>
           tailwind.config = {
             theme: {
+               fontFamily: {
+                    'lato': ['Lato, sans-serif'],
+               },
+
               extend: {
                 colors: {
-                  clifford: '#da373d',
+                  'good': '#F85559',
+                   
+
                 }
               }
             }
@@ -31,8 +39,49 @@
 <!--00 header aection start -->
      <header>
           <!-- navbar start -->
-          <nav>
+          <nav class="p-8 ">
+               <div class="container bg-good rounded-full  mx-auto">
+                    <div class="flex justify-between px-6 py-4">
+                         <!-- 01 ul -->
+                         <ul class="items-center hidden  lg:flex">
+                              <li class="flex">
+                                   <a rel="noopener noreferrer" href="#" class="flex items-center px-3 text-white">Home</a>
+                              </li>
+                              <li class="flex">
+                                   <a rel="noopener noreferrer" href="#" class="flex items-center px-3 text-white">About Us</a>
+                              </li>
+                              <li class="flex">
+                                   <a rel="noopener noreferrer" href="#" class="flex items-center px-3 text-white">Shop</a>
+                              </li>
+                              <li class="flex">
+                                   <a rel="noopener noreferrer" href="#" class="flex items-center px-3 text-white">All Fruits</a>
+                              </li>
+                         </ul>
 
+                         <!-- 02 img -->
+                         <div class="">
+                              <img src="images/logo.png" alt="">
+
+                         </div>
+
+                         <!-- 03 Search bar -->
+                         <div class="flex items-center md:space-x-4">
+                              <div class="relative hidden lg:block">
+                                   <span class="absolute inset-y-0 right-0 flex items-center ">
+                                        <i class="text-white pr-8 fa-solid fa-magnifying-glass"></i>
+                                   </span>
+                                   <input type="search" name="Search" placeholder="Search here" class="w-32 py-3 pl-8 text-sm rounded-full sm:w-72 focus:outline-none dark:bg-gray-800 dark:text-gray-100 focus:dark:bg-gray-900">
+                              </div>
+                         </div>
+
+                         <!--04 togol menu -->
+                         <button title="Open menu" type="button" class="p-4 lg:hidden">
+                              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 dark:text-gray-100">
+                                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                              </svg>
+                         </button>
+                    </div>
+               </div>
           </nav>
           <!-- navbar end -->
 
